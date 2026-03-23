@@ -1,0 +1,42 @@
+{
+	"TaskName": "p300",
+	"Manufacturer": "Brain Products",
+	"PowerLineFrequency": 50.0,
+	"SamplingFrequency": 256.0,
+	"SoftwareFilters": {
+		"preprocessing_steps": {
+			"Description": "low-pass filter, downsampling, baselining"
+		}
+	},
+	"RecordingDuration": 104.2421875,
+	"RecordingType": "continuous",
+	"EEGReference": "nose",
+	"EEGGround": "n/a",
+	"EEGPlacementScheme": "10-05 system",
+	"EEGChannelCount": 8,
+	"EOGChannelCount": 0,
+	"ECGChannelCount": 0,
+	"EMGChannelCount": 0,
+	"TriggerChannelCount": 0,
+	"ManufacturersModelName": "BrainAmp",
+	"SoftwareVersions": "Matlab",
+	"CapManufacturer": "Brain Products",
+	"HardwareFilters": {
+		"Bandpass": {
+			"low_cutoff_hz": 0.1,
+			"high_cutoff_hz": 40.0,
+			"Type": "analog hardware filter for acquisition; low-pass for online"
+		}
+	},
+	"TaskDescription": "[auditory_oddball] Auditory Multi-class Spatial ERP (AMUSE) paradigm using spatial auditory cues from six speaker locations in azimuth plane. Two-step hex-o-spell like interface for character selection. Subjects mentally count target stimuli from one of six spatial directions. SOA: 175.0ms.",
+	"Instructions": "Focus attention to one target direction and mentally count the number of appearances",
+	"CogAtlasID": "https://www.cognitiveatlas.org/task/id/tsk_GxjZBNiJorj1K/",
+	"InstitutionName": "Berlin Institute of Technology",
+	"InstitutionAddress": "Machine Learning Laboratory, Berlin Institute of Technology, FR6-9, Franklinstra\u00dfe 28/29, 10587 Berlin, Germany",
+	"InstitutionalDepartmentName": "Machine Learning Laboratory",
+	"CapManufacturersModelName": "n/a",
+	"SubjectArtefactDescription": "Impedance kept below 15.0 kOhm",
+	"DeviceSerialNumber": "n/a",
+	"Description": "Auditory BCI speller using spatial cues (AMUSE paradigm) allowing purely auditory communication interface",
+	"MISCChannelCount": 0
+}

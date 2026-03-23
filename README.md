@@ -1,0 +1,195 @@
+# BNCI 2015-003 P300 dataset
+
+BNCI 2015-003 P300 dataset.
+
+## Dataset Overview
+
+- **Code**: BNCI2015-003
+- **Paradigm**: p300
+- **DOI**: 10.1016/j.neulet.2009.06.045
+- **Subjects**: 10
+- **Sessions per subject**: 1
+- **Events**: Target=2, NonTarget=1
+- **Trial interval**: [0, 0.8] s
+- **Runs per session**: 2
+- **Session IDs**: Session 1, Session 2
+- **File format**: gdf
+- **Data preprocessed**: True
+- **Number of contributing labs**: 1
+
+## Acquisition
+
+- **Sampling rate**: 256.0 Hz
+- **Number of channels**: 8
+- **Channel types**: eeg=8
+- **Channel names**: Fz, Cz, P3, Pz, P4, PO7, Oz, PO8
+- **Montage**: standard_1005
+- **Hardware**: BrainAmp
+- **Software**: Matlab
+- **Reference**: nose
+- **Sensor type**: Ag/AgCl electrodes
+- **Line frequency**: 50.0 Hz
+- **Online filters**: hardware analog band-pass filter between 0.1 and 250 Hz
+- **Impedance threshold**: 15.0 kOhm
+- **Cap manufacturer**: Brain Products
+- **Electrode type**: Ag/AgCl
+- **Electrode material**: silver/silver chloride
+- **Auxiliary channels**: EOG (2 ch, bipolar)
+
+## Participants
+
+- **Number of subjects**: 10
+- **Health status**: patients
+- **Clinical population**: Healthy
+- **Age**: mean=34.1, std=11.4, min=20, max=57
+- **BCI experience**: naive
+- **Species**: human
+
+## Experimental Protocol
+
+- **Paradigm**: p300
+- **Task type**: auditory_oddball
+- **Number of classes**: 2
+- **Class labels**: Target, NonTarget
+- **Tasks**: spelling, auditory_attention
+- **Study design**: Auditory Multi-class Spatial ERP (AMUSE) paradigm using spatial auditory cues from six speaker locations in azimuth plane. Two-step hex-o-spell like interface for character selection. Subjects mentally count target stimuli from one of six spatial directions.
+- **Study domain**: communication
+- **Feedback type**: auditory
+- **Stimulus type**: spatial_auditory
+- **Stimulus modalities**: auditory
+- **Primary modality**: auditory
+- **Synchronicity**: synchronous
+- **Mode**: online
+- **Training/test split**: True
+- **Instructions**: Focus attention to one target direction and mentally count the number of appearances
+- **Stimulus presentation**: soa_ms=175, stimulus_duration_ms=40, stimulus_intensity_db=58, speaker_arrangement=6 speakers at ear height, evenly distributed in circle with 60° distance, radius 65 cm
+
+## HED Event Annotations
+
+Schema: HED 8.4.0 | Browse: https://www.hedtags.org/hed-schema-browser
+
+```
+  Target
+    ├─ Sensory-event
+    ├─ Experimental-stimulus
+    ├─ Visual-presentation
+    └─ Target
+
+  NonTarget
+    ├─ Sensory-event
+    ├─ Experimental-stimulus
+    ├─ Visual-presentation
+    └─ Non-target
+
+```
+## Paradigm-Specific Parameters
+
+- **Detected paradigm**: p300
+- **Number of targets**: 6
+- **Stimulus onset asynchrony**: 175.0 ms
+
+## Data Structure
+
+- **Trials**: 48
+- **Trials per class**: calibration_per_direction=8
+- **Trials context**: calibration_phase
+
+## Preprocessing
+
+- **Data state**: filtered
+- **Preprocessing applied**: True
+- **Steps**: low-pass filter, downsampling, baselining
+- **Highpass filter**: 0.1 Hz
+- **Lowpass filter**: 40.0 Hz
+- **Bandpass filter**: {'low_cutoff_hz': 0.1, 'high_cutoff_hz': 40.0}
+- **Filter type**: analog hardware filter for acquisition; low-pass for online
+- **Artifact methods**: variance criterium, peak-to-peak difference criterium
+- **Re-reference**: nose
+- **Downsampled to**: 100.0 Hz
+- **Epoch window**: [-0.15, None]
+- **Notes**: For online use signal was low-pass filtered below 40 Hz and downsampled to 100 Hz. Data baselined using 150 ms pre-stimulus data as reference.
+
+## Signal Processing
+
+- **Classifiers**: LDA, linear binary classifier
+- **Feature extraction**: spatio-temporal features, r2 coefficient, interval averaging
+- **Spatial filters**: shrinkage regularization (Ledoit-Wolf)
+
+## Cross-Validation
+
+- **Method**: online
+- **Evaluation type**: online
+
+## Performance (Original Study)
+
+- **Accuracy**: 77.4%
+- **Itr**: 2.84 bits/min
+- **Char Per Min Session1**: 0.59
+- **Char Per Min Session2 Max**: 1.41
+- **Char Per Min Session2 Avg**: 0.94
+- **Itr Session2 Avg**: 5.26
+- **Itr Session2 Max**: 7.55
+- **Success Rate Session1**: 76.0
+
+## BCI Application
+
+- **Applications**: speller, communication
+- **Environment**: laboratory
+- **Online feedback**: True
+
+## Tags
+
+- **Pathology**: Healthy
+- **Modality**: Auditory
+- **Type**: ERP, P300
+
+## Documentation
+
+- **Description**: Auditory BCI speller using spatial cues (AMUSE paradigm) allowing purely auditory communication interface
+- **DOI**: 10.1016/j.neulet.2009.06.045
+- **Associated paper DOI**: 10.3389/fnins.2011.00112
+- **License**: CC-BY-NC-ND-4.0
+- **Investigators**: Martijn Schreuder, Thomas Rost, Michael Tangermann
+- **Senior author**: Michael Tangermann
+- **Contact**: schreuder@tu-berlin.de
+- **Institution**: Berlin Institute of Technology
+- **Department**: Machine Learning Laboratory
+- **Address**: Machine Learning Laboratory, Berlin Institute of Technology, FR6-9, Franklinstraße 28/29, 10587 Berlin, Germany
+- **Country**: Germany
+- **Repository**: BNCI Horizon
+- **Publication year**: 2011
+- **Funding**: European ICT Programme Project FP7-224631; European ICT Programme Project FP7-216886; Deutsche Forschungsgemeinschaft (DFG MU 987/3-2); Bundesministerium fur Bildung und Forschung (BMBF FKZ 01IB001A, 01GQ0850); FP7-ICT PASCAL2 Network of Excellence ICT-216886
+- **Ethics approval**: Ethics Committee of the Charité University Hospital
+- **Acknowledgements**: Thomas Denck, David List and Larissa Queda for help with experiments. Klaus-Robert Müller and Benjamin Blankertz for fruitful discussions.
+- **Keywords**: brain-computer interface, directional hearing, auditory event-related potentials, P300, N200, dynamic subtrials
+
+## External Links
+
+- **Source**: http://www.frontiersin.org/neuroprosthetics/10.3389/fnins.2011.00112/abstract
+
+## Abstract
+
+This online study introduces an auditory spelling interface that eliminates the necessity for visual representation. In up to two sessions, a group of healthy subjects (N=21) was asked to use a text entry application, utilizing the spatial cues of the AMUSE paradigm (Auditory Multi-class Spatial ERP). The speller relies on the auditory sense both for stimulation and the core feedback. Without prior BCI experience, 76% of the participants were able to write a full sentence during the first session. By exploiting the advantages of a newly introduced dynamic stopping method, a maximum writing speed of 1.41 char/min (7.55 bits/min) could be reached during the second session (average: 0.94 char/min, 5.26 bits/min).
+
+## Methodology
+
+Participants surrounded by six speakers at ear height in circle (60° spacing, 65 cm radius). Each direction associated with unique combination of tone (base frequency + harmonics) and band-pass filtered noise. Two-step hex-o-spell interface for character selection. Session 1: calibration (48 trials, 8 per direction, 15 iterations each) followed by online spelling with 15 fixed iterations. Session 2: calibration followed by online spelling with dynamic stopping method (4-15 iterations). Spatio-temporal feature extraction using r2 coefficient and interval selection (2-4 intervals for early and late components, 112-224 features total). Linear binary classifier with shrinkage regularization (Ledoit-Wolf). Decision making based on median classifier scores across iterations.
+
+## References
+
+Schreuder, M., Rost, T., & Tangermann, M. (2011). Listen, you are writing! Speeding up online spelling with a dynamic auditory BCI. Frontiers in neuroscience, 5, 112. https://doi.org/10.3389/fnins.2011.00112
+
+Notes
+
+.. note::
+
+``BNCI2015_003`` was previously named ``BNCI2015003``. ``BNCI2015003`` will be removed in version 1.1.
+
+.. versionadded:: 0.4.0
+Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Hochenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896). https://doi.org/10.21105/joss.01896
+
+Pernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103. https://doi.org/10.1038/s41597-019-0104-8
+
+---
+Generated by MOABB 1.5.0 (Mother of All BCI Benchmarks)
+https://github.com/NeuroTechX/moabb

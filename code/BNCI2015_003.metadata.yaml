@@ -1,0 +1,208 @@
+_dataset:
+  class: BNCI2015_003
+  code: BNCI2015-003
+  doi: 10.1016/j.neulet.2009.06.045
+  interval:
+  - 0
+  - 0.8
+  n_subjects: 10
+  paradigm: p300
+abstract: 'This online study introduces an auditory spelling interface that eliminates the necessity for visual representation.
+  In up to two sessions, a group of healthy subjects (N=21) was asked to use a text entry application, utilizing the spatial
+  cues of the AMUSE paradigm (Auditory Multi-class Spatial ERP). The speller relies on the auditory sense both for stimulation
+  and the core feedback. Without prior BCI experience, 76% of the participants were able to write a full sentence during the
+  first session. By exploiting the advantages of a newly introduced dynamic stopping method, a maximum writing speed of 1.41
+  char/min (7.55 bits/min) could be reached during the second session (average: 0.94 char/min, 5.26 bits/min).'
+acquisition:
+  auxiliary_channels:
+    eog_channels: 2
+    eog_type:
+    - bipolar
+    has_eog: true
+  cap_manufacturer: Brain Products
+  channel_types:
+    eeg: 8
+  electrode_material: silver/silver chloride
+  electrode_type: Ag/AgCl
+  filters: hardware analog band-pass filter between 0.1 and 250 Hz
+  hardware: BrainAmp
+  impedance_threshold_kohm: 15.0
+  line_freq: 50.0
+  montage: standard_1005
+  n_channels: 8
+  reference: nose
+  sampling_rate: 256.0
+  sensor_type: Ag/AgCl electrodes
+  sensors:
+  - Fz
+  - Cz
+  - P3
+  - Pz
+  - P4
+  - PO7
+  - Oz
+  - PO8
+  software: Matlab
+bci_application:
+  applications:
+  - speller
+  - communication
+  environment: laboratory
+  online_feedback: true
+cross_validation:
+  cv_method: online
+  evaluation_type:
+  - online
+data_processed: true
+data_structure:
+  n_trials: 48
+  n_trials_per_class:
+    calibration_per_direction: 8
+  trials_context: calibration_phase
+documentation:
+  acknowledgements: Thomas Denck, David List and Larissa Queda for help with experiments. Klaus-Robert Müller and Benjamin
+    Blankertz for fruitful discussions.
+  associated_paper_doi: 10.3389/fnins.2011.00112
+  contact_info:
+  - schreuder@tu-berlin.de
+  country: Germany
+  description: Auditory BCI speller using spatial cues (AMUSE paradigm) allowing purely auditory communication interface
+  doi: 10.1016/j.neulet.2009.06.045
+  ethics_approval:
+  - Ethics Committee of the Charité University Hospital
+  funding:
+  - European ICT Programme Project FP7-224631
+  - European ICT Programme Project FP7-216886
+  - Deutsche Forschungsgemeinschaft (DFG MU 987/3-2)
+  - Bundesministerium fur Bildung und Forschung (BMBF FKZ 01IB001A, 01GQ0850)
+  - FP7-ICT PASCAL2 Network of Excellence ICT-216886
+  institution: Berlin Institute of Technology
+  institution_address: Machine Learning Laboratory, Berlin Institute of Technology, FR6-9, Franklinstraße 28/29, 10587 Berlin,
+    Germany
+  institution_department: Machine Learning Laboratory
+  investigators:
+  - Martijn Schreuder
+  - Thomas Rost
+  - Michael Tangermann
+  keywords:
+  - brain-computer interface
+  - directional hearing
+  - auditory event-related potentials
+  - P300
+  - N200
+  - dynamic subtrials
+  license: CC-BY-NC-ND-4.0
+  publication_year: 2011
+  repository: BNCI Horizon
+  senior_author: Michael Tangermann
+experiment:
+  class_labels:
+  - Target
+  - NonTarget
+  events:
+    NonTarget: 1
+    Target: 2
+  feedback_type: auditory
+  has_training_test_split: true
+  instructions: Focus attention to one target direction and mentally count the number of appearances
+  mode: online
+  n_classes: 2
+  paradigm: p300
+  primary_modality: auditory
+  stimulus_modalities:
+  - auditory
+  stimulus_presentation:
+    soa_ms: '175'
+    speaker_arrangement: 6 speakers at ear height, evenly distributed in circle with 60° distance, radius 65 cm
+    stimulus_duration_ms: '40'
+    stimulus_intensity_db: '58'
+  stimulus_type: spatial_auditory
+  study_design: Auditory Multi-class Spatial ERP (AMUSE) paradigm using spatial auditory cues from six speaker locations in
+    azimuth plane. Two-step hex-o-spell like interface for character selection. Subjects mentally count target stimuli from
+    one of six spatial directions.
+  study_domain: communication
+  synchronicity: synchronous
+  task_type: auditory_oddball
+  tasks:
+  - spelling
+  - auditory_attention
+external_links:
+  source: http://www.frontiersin.org/neuroprosthetics/10.3389/fnins.2011.00112/abstract
+file_format: gdf
+methodology: 'Participants surrounded by six speakers at ear height in circle (60° spacing, 65 cm radius). Each direction
+  associated with unique combination of tone (base frequency + harmonics) and band-pass filtered noise. Two-step hex-o-spell
+  interface for character selection. Session 1: calibration (48 trials, 8 per direction, 15 iterations each) followed by online
+  spelling with 15 fixed iterations. Session 2: calibration followed by online spelling with dynamic stopping method (4-15
+  iterations). Spatio-temporal feature extraction using r2 coefficient and interval selection (2-4 intervals for early and
+  late components, 112-224 features total). Linear binary classifier with shrinkage regularization (Ledoit-Wolf). Decision
+  making based on median classifier scores across iterations.'
+n_contributing_labs: 1
+paradigm_specific:
+  detected_paradigm: p300
+  n_targets: 6
+  soa_ms: 175.0
+participants:
+  age_max: 57
+  age_mean: 34.1
+  age_min: 20
+  age_std: 11.4
+  bci_experience: naive
+  clinical_population: Healthy
+  health_status: patients
+  n_subjects: 10
+  species: human
+performance:
+  accuracy_percent: 77.4
+  char_per_min_session1: 0.59
+  char_per_min_session2_avg: 0.94
+  char_per_min_session2_max: 1.41
+  itr_bits_per_min: 2.84
+  itr_session2_avg: 5.26
+  itr_session2_max: 7.55
+  success_rate_session1: 76.0
+preprocessing:
+  artifact_methods:
+  - variance criterium
+  - peak-to-peak difference criterium
+  bandpass:
+    high_cutoff_hz: 40.0
+    low_cutoff_hz: 0.1
+  data_state: filtered
+  downsampled_to_hz: 100.0
+  epoch_window:
+  - -0.15
+  - null
+  filter_type: analog hardware filter for acquisition; low-pass for online
+  highpass_hz: 0.1
+  lowpass_hz: 40.0
+  notes: For online use signal was low-pass filtered below 40 Hz and downsampled to 100 Hz. Data baselined using 150 ms pre-stimulus
+    data as reference.
+  preprocessing_applied: true
+  preprocessing_steps:
+  - low-pass filter
+  - downsampling
+  - baselining
+  re_reference: nose
+runs_per_session: 2
+sessions:
+- Session 1
+- Session 2
+sessions_per_subject: 1
+signal_processing:
+  classifiers:
+  - LDA
+  - linear binary classifier
+  feature_extraction:
+  - spatio-temporal features
+  - r2 coefficient
+  - interval averaging
+  spatial_filters:
+  - shrinkage regularization (Ledoit-Wolf)
+tags:
+  modality:
+  - Auditory
+  pathology:
+  - Healthy
+  type:
+  - ERP
+  - P300
