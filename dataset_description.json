@@ -1,7 +1,7 @@
 {
   "Name": "BNCI 2015-003 P300 dataset",
   "BIDSVersion": "1.9.0",
-  "Version": "1.0.1",
+  "Version": "1.0.2",
   "HEDVersion": "8.4.0",
   "DatasetType": "derivative",
   "License": "CC-BY-NC-ND-4.0",
