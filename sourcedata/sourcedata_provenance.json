@@ -13,52 +13,63 @@
   {
    "file": "s1.mat",
    "bytes": 8597069,
-   "sha256": "f542f80d2f9042901a3165265119f8d5c8b975fabeecced9c41257557e631c1d"
+   "sha256": "f542f80d2f9042901a3165265119f8d5c8b975fabeecced9c41257557e631c1d",
+   "subject": "1"
   },
   {
    "file": "s10.mat",
    "bytes": 3351079,
-   "sha256": "7d430f54b482bfe6f412262bf629bccfaeaf18be5cb14db939c27eb5e35aa7d4"
+   "sha256": "7d430f54b482bfe6f412262bf629bccfaeaf18be5cb14db939c27eb5e35aa7d4",
+   "subject": "10"
   },
   {
    "file": "s2.mat",
    "bytes": 8338148,
-   "sha256": "d95f983f76d7d3b364031a9263ae907869e896c14e0911886230a7a961a8aaf7"
+   "sha256": "d95f983f76d7d3b364031a9263ae907869e896c14e0911886230a7a961a8aaf7",
+   "subject": "2"
   },
   {
    "file": "s3.mat",
    "bytes": 7447520,
-   "sha256": "be397a729bd6c7fedfda91e610b24428804fd74d48f51238dabab03d796dd1d2"
+   "sha256": "be397a729bd6c7fedfda91e610b24428804fd74d48f51238dabab03d796dd1d2",
+   "subject": "3"
   },
   {
    "file": "s4.mat",
    "bytes": 6484454,
-   "sha256": "59ab90aba55fb2d7f450b8e3b2ef2e1999ac62f7ebf61e873a0dd50d11d30ca3"
+   "sha256": "59ab90aba55fb2d7f450b8e3b2ef2e1999ac62f7ebf61e873a0dd50d11d30ca3",
+   "subject": "4"
   },
   {
    "file": "s5.mat",
    "bytes": 7000178,
-   "sha256": "52ec4e9876245f12a804e285de1bdae72b956f7f80f409a74e3b69bbb1425d69"
+   "sha256": "52ec4e9876245f12a804e285de1bdae72b956f7f80f409a74e3b69bbb1425d69",
+   "subject": "5"
   },
   {
    "file": "s6.mat",
    "bytes": 3368512,
-   "sha256": "0a78616d301b1788e9a8c8a43f3aee3cd056f806b3be9a0c809fe85204ddffb3"
+   "sha256": "0a78616d301b1788e9a8c8a43f3aee3cd056f806b3be9a0c809fe85204ddffb3",
+   "subject": "6"
   },
   {
    "file": "s7.mat",
    "bytes": 3719967,
-   "sha256": "acccbcb1af72f8efccfec344fce32e80c0b911df0768a56fe6ea531c5b8f2e41"
+   "sha256": "acccbcb1af72f8efccfec344fce32e80c0b911df0768a56fe6ea531c5b8f2e41",
+   "subject": "7"
   },
   {
    "file": "s8.mat",
    "bytes": 3594200,
-   "sha256": "8cd781d01b64da2c57fac435a42f8e2dccc2da28905ace10e1f8d46523075972"
+   "sha256": "8cd781d01b64da2c57fac435a42f8e2dccc2da28905ace10e1f8d46523075972",
+   "subject": "8"
   },
   {
    "file": "s9.mat",
    "bytes": 3482805,
-   "sha256": "d583e4d6dcb0929c564dce0b4834cf596199abbe8c64e35eeeedd9056a8ddf02"
+   "sha256": "d583e4d6dcb0929c564dce0b4834cf596199abbe8c64e35eeeedd9056a8ddf02",
+   "subject": "9"
   }
- ]
+ ],
+ "n_subjects_recorded": 10
 }
