@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "BNCI 2015-003 P300 dataset",
-  "description": "An auditory brain-computer interface dataset implementing the AMUSE (Auditory Multi-class Spatial ERP) paradigm for spelling applications. The dataset comprises EEG recordings from 10 healthy subjects performing an auditory oddball task with spatial cues from six speaker locations, achieving online spelling performance of up to 1.41 characters per minute. Data include preprocessed EEG signals with P300 and N200 event-related potentials, suitable for BCI algorithm development and evaluation.",
-  "methods_description": "EEG data were acquired at 256 Hz from 8 channels (Fz, Cz, P3, Pz, P4, PO7, Oz, PO8) using Ag/AgCl electrodes with nose reference. Stimuli consisted of auditory tones and band-pass filtered noise presented from six speakers arranged in a circle at 60° intervals. Preprocessing included hardware analog band-pass filtering (0.1-250 Hz), low-pass filtering (40 Hz), downsampling to 100 Hz, and baselining using 150 ms pre-stimulus data. Spatio-temporal features were extracted using r2 coefficient and interval averaging, with classification performed using linear discriminant analysis with Ledoit-Wolf shrinkage regularization.",
+  "description": "An auditory brain-computer interface dataset implementing the AMUSE (Auditory Multi-class Spatial ERP) paradigm for spelling applications. The dataset comprises EEG recordings from 10 healthy subjects performing an auditory oddball task with spatial cues from six speaker locations, achieving online spelling performance of up to 1.41 characters per minute. Data includes preprocessed EEG signals with P300 and N200 event-related potentials, suitable for BCI research and benchmarking.",
+  "methods_description": "EEG data acquired at 256 Hz from 8 channels (Fz, Cz, P3, Pz, P4, PO7, Oz, PO8) using BrainAmp hardware with Ag/AgCl electrodes referenced to nose. Subjects were positioned within six speakers arranged in a circle (60° spacing, 65 cm radius) and performed an auditory oddball task with spatial cues. Two sessions per subject included calibration (48 trials, 8 per direction) followed by online spelling. Data preprocessed with bandpass filtering (0.1-40 Hz), downsampling to 100 Hz, and baselining using 150 ms pre-stimulus data. Spatio-temporal features extracted using r2 coefficient with interval selection, classified using linear discriminant analysis with Ledoit-Wolf shrinkage regularization.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -19,13 +19,13 @@
       "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
     },
     {
+      "term": "P300"
+    },
+    {
       "term": "Event-Related Potentials, P300",
       "subject_scheme": "MeSH",
       "scheme_uri": "https://id.nlm.nih.gov/mesh/",
       "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
-    },
-    {
-      "term": "P300"
     },
     {
       "term": "auditory oddball"
@@ -104,5 +104,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "b6c0375012b7b1cf0af5a62082e9a8563db0ba4e29ba4598ad5ab598ec3b9d60"
+  "source_hash": "6c394b972654e51681516109031d2d288f4f41062447a6e74d70e0e8c58bf868"
 }
