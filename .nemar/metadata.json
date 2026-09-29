@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "BNCI 2015-003 P300 dataset",
-  "description": "An auditory brain-computer interface dataset implementing the AMUSE (Auditory Multi-class Spatial ERP) paradigm for spelling applications. The dataset comprises EEG recordings from 10 healthy subjects performing an auditory oddball task with spatial cues from six speaker locations, achieving online spelling performance of up to 1.41 characters per minute. Data includes preprocessed EEG signals with P300 and N200 event-related potentials, suitable for BCI research and benchmarking.",
-  "methods_description": "EEG data acquired at 256 Hz from 8 channels (Fz, Cz, P3, Pz, P4, PO7, Oz, PO8) using BrainAmp hardware with Ag/AgCl electrodes referenced to nose. Subjects were positioned within six speakers arranged in a circle (60° spacing, 65 cm radius) and performed an auditory oddball task with spatial cues. Two sessions per subject included calibration (48 trials, 8 per direction) followed by online spelling. Data preprocessed with bandpass filtering (0.1-40 Hz), downsampling to 100 Hz, and baselining using 150 ms pre-stimulus data. Spatio-temporal features extracted using r2 coefficient with interval selection, classified using linear discriminant analysis with Ledoit-Wolf shrinkage regularization.",
+  "description": "Auditory P300 brain-computer interface speller dataset using the AMUSE (Auditory Multi-class Spatial ERP) paradigm, in which spatial auditory cues from six speakers enable text entry without visual stimuli. EEG was recorded from 8 channels in healthy participants across calibration and online spelling phases, including a dynamic stopping method in the second session. The dataset supports research on auditory ERP-based communication interfaces.",
+  "methods_description": "Participants sat surrounded by six speakers at ear height (60° spacing, 65 cm radius). Each direction had a unique tone and band-pass filtered noise combination, and participants mentally counted target stimuli in a two-step hex-o-spell interface. Session 1 comprised calibration (48 trials) followed by online spelling with 15 fixed iterations; Session 2 used dynamic stopping (4-15 iterations). EEG was recorded with a BrainAmp amplifier at 256 Hz from 8 Ag/AgCl electrodes and classified with shrinkage-regularized linear discriminant analysis on spatio-temporal features.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -13,31 +13,22 @@
   },
   "keywords": [
     {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+      "term": "EEG"
+    },
+    {
+      "term": "brain-computer interface"
     },
     {
       "term": "P300"
     },
     {
-      "term": "Event-Related Potentials, P300",
-      "subject_scheme": "MeSH",
-      "scheme_uri": "https://id.nlm.nih.gov/mesh/",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D018913"
+      "term": "auditory event-related potentials"
     },
     {
-      "term": "auditory oddball"
+      "term": "spatial auditory stimulation"
     },
     {
-      "term": "EEG"
-    },
-    {
-      "term": "spatial attention"
-    },
-    {
-      "term": "speller interface"
+      "term": "speller"
     }
   ],
   "related_identifiers": [
@@ -49,7 +40,7 @@
     {
       "identifier": "10.3389/fnins.2011.00112",
       "identifier_type": "DOI",
-      "relation_type": "References"
+      "relation_type": "IsDescribedBy"
     },
     {
       "identifier": "https://github.com/nemarDatasets/nm000189",
@@ -60,31 +51,38 @@
       "identifier": "https://nemar.org/dataset/nm000189",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.21105/joss.01896",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "10.1038/s41597-019-0104-8",
+      "identifier_type": "DOI",
+      "relation_type": "References"
     }
   ],
   "funding_references": [
     {
-      "funder_name": "FP7-ICT PASCAL2 Network of Excellence ICT-216886"
-    },
-    {
-      "funder_name": "European Commission",
+      "funder_name": "European ICT Programme",
       "award_number": "FP7-224631"
     },
     {
-      "funder_name": "European Commission",
+      "funder_name": "European ICT Programme",
       "award_number": "FP7-216886"
     },
     {
-      "funder_name": "DFG",
+      "funder_name": "Deutsche Forschungsgemeinschaft",
       "award_number": "MU 987/3-2"
     },
     {
-      "funder_name": "BMBF",
-      "award_number": "01IB001A"
+      "funder_name": "Bundesministerium für Bildung und Forschung",
+      "award_number": "FKZ 01IB001A, 01GQ0850"
     },
     {
-      "funder_name": "BMBF",
-      "award_number": "01GQ0850"
+      "funder_name": "FP7-ICT PASCAL2 Network of Excellence",
+      "award_number": "ICT-216886"
     }
   ],
   "resource_type_general": "Dataset",
@@ -93,7 +91,7 @@
     "eeg"
   ],
   "sizes": [
-    "77.1 MB (31 files)"
+    "73.50 MB (31 files)"
   ],
   "formats": [
     ".bdf",
