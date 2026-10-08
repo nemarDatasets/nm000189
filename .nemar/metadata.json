@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "BNCI 2015-003 P300 dataset",
-  "description": "Auditory P300 brain-computer interface speller dataset using the AMUSE (Auditory Multi-class Spatial ERP) paradigm, in which spatial auditory cues from six speakers enable text entry without visual stimuli. EEG was recorded from 8 channels in healthy participants across calibration and online spelling phases, including a dynamic stopping method in the second session. The dataset supports research on auditory ERP-based communication interfaces.",
-  "methods_description": "Participants sat surrounded by six speakers at ear height (60° spacing, 65 cm radius). Each direction had a unique tone and band-pass filtered noise combination, and participants mentally counted target stimuli in a two-step hex-o-spell interface. Session 1 comprised calibration (48 trials) followed by online spelling with 15 fixed iterations; Session 2 used dynamic stopping (4-15 iterations). EEG was recorded with a BrainAmp amplifier at 256 Hz from 8 Ag/AgCl electrodes and classified with shrinkage-regularized linear discriminant analysis on spatio-temporal features.",
+  "description": "EEG recordings from an online auditory P300 brain-computer interface speller based on the AMUSE (Auditory Multi-class Spatial ERP) paradigm. Healthy participants selected characters through a two-step hex-o-spell interface using spatial auditory cues from six speakers, with no visual stimulation. The dataset includes a fixed-iteration session and a session using dynamic stopping to speed up spelling.",
+  "methods_description": "Participants sat surrounded by six speakers at ear height (60° spacing, 65 cm radius). Each direction had a unique tone and band-pass filtered noise combination. EEG was recorded from 8 Ag/AgCl channels with a BrainAmp amplifier at 256 Hz, referenced to the nose. Session 1 consisted of calibration (48 trials) followed by online spelling with 15 fixed iterations. Session 2 consisted of calibration followed by online spelling with dynamic stopping (4-15 iterations). Classification used spatio-temporal features with a shrinkage-regularized linear binary classifier.",
   "license": "CC-BY-NC-ND-4.0",
   "dataset_type": "derivative",
   "authors": {
@@ -102,5 +102,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "6c394b972654e51681516109031d2d288f4f41062447a6e74d70e0e8c58bf868"
+  "source_hash": "f22e8081c8037e85b20980690ffe8fc39424ebbea276c9d5c815514dd125e23a"
 }
